@@ -12,6 +12,7 @@ typedef struct _Employee
 	char* pDepartment;
 	char* pCompany;
 	int salary;
+	//If there is any employee specific functions; add interface here.
 	fptrPrintHello Hello;
 }Employee;
 
