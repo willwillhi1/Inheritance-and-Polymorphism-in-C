@@ -3,10 +3,8 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-//#include <string.h>
 
 typedef struct _Person Person;
-
 
 typedef void	(*fptrDisplayInfo)(Person*);
 typedef void    (*fptrWriteToFile)(Person*, const char*);
@@ -20,7 +18,7 @@ typedef struct _Person
 	//interface to access member functions
 	fptrDisplayInfo Display;
 	fptrWriteToFile WriteToFile;
-	fptrDelete		Delete;
+	fptrDelete	Delete;
 }Person;
 
 Person* new_Person(const char* pFName, const char* pLName);	//constructor
@@ -28,9 +26,5 @@ void delete_Person(Person* const pPersonObj);	//destructor
 
 void Person_DisplayInfo(Person* const pPersonObj);
 void Person_WriteToFile(Person* const pPersonObj, const char* pFileName);
-
-
-
-
 
 #endif
